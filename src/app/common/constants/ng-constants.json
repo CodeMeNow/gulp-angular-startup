@@ -1,0 +1,11 @@
+{
+  "staging": {
+    "ENV": "staging",
+    "API_URL": "http://staging.endpoint.com",
+    "MOCK_API_URL": "https://www.mockable.io",
+  },
+  "production": {
+    "ENV": "production",
+    "API_URL": "http://production.endpoint.com"
+  }
+}
