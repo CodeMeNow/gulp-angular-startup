@@ -6,9 +6,21 @@
     <p>
       Translated string: {{'HELLO' | translate}} , {{'HOMEPAGE_CLAIM' | translate}}
     </p>
-    <button type="button" ng-click="homePage.changeLanguage('it')">Italiano</button>
-    <button type="button" ng-click="homePage.changeLanguage('en')">English</button>
-    <button type="button" ng-click="homePage.changeLanguage('pl')">Polski</button>
+    <button type="button"
+        class="switch-to-ita"
+        ng-click="homePage.changeLanguage('it')">
+      Italiano
+    </button>
+    <button type="button"
+        class="switch-to-en"
+        ng-click="homePage.changeLanguage('en')">
+      English
+    </button>
+    <button type="button"
+        class="switch-to-pl"
+        ng-click="homePage.changeLanguage('pl')">
+      Polski
+    </button>
   </div>
 </div>
 <div class="row">
