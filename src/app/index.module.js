@@ -32,8 +32,10 @@ angular.module('app', [
   'ngMessages',
   'ngAria',
   'ngResource',
+  //Vendor modues
   'ui.router',
-  'ui.bootstrap'])
+  'ui.bootstrap',
+  'pascalprecht.translate'])
 
   .constant('moment', moment)
   .config(config)

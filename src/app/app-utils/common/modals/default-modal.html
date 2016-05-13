@@ -1,0 +1,49 @@
+<div class="modal-header">
+  <h4 class="modal-title" ng-switch on="modal.config.type">
+    <span ng-switch-when="error">
+      <i class="fa fa-times-circle"></i> Errore
+    </span>
+    <span ng-switch-when="danger">
+      <i class="fa fa-exclamation-circle"></i> Attenzione</i>
+    </span>
+    <span ng-switch-when="success">
+      <i class="fa fa-check-circle"></i> Successo
+    </span>
+    <span ng-switch-when="info">
+      <i class="fa fa-info-circle"></i> Info
+    </span>
+    <span ng-switch-default>
+      <i class="fa fa-info-circle"></i> Info
+    </span>
+    {{modal.config.title}}
+  </h4>
+</div>
+
+<div class="modal-body">
+  {{modal.config}}
+  <div class="message" ng-if="modal.config.message">
+    {{modal.config.message}}
+  </div>
+
+  <ul class="list-unstyled details" ng-if="modal.config.details">
+    <li ng-repeat="detail in modal.config.details">
+      <div ng-class="'alert alert-' + detail.type">
+        {{detail.description}}
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="modal-footer">
+  <button
+      class="btn btn-default"
+      type="button"
+      ng-if="modal.config.dismissableBtnTitle"
+      ng-click="modal.dismiss()">
+    {{modal.config.dismissableBtnTitle}}
+  </button>
+
+  <button class="btn btn-primary" type="button" ng-click="modal.close()">
+    {{modal.config.closeBtnTitle}}
+  </button>
+</div>
