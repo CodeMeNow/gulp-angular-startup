@@ -1,10 +1,3 @@
-export function runBlock($httpBackend) {
+export function runBlock() {
   'ngInject';
-  $httpBackend.whenGET(passAppAssets).passThrough();
-  function passAppAssets(path) {
-    if (path.match(/^app\//)) {
-      return true;
-    }
-    return false;
-  }
 }

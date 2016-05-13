@@ -32,7 +32,6 @@ angular.module('app', [
   'ngMessages',
   'ngAria',
   'ngResource',
-  'ngMockE2E',
   'ui.router',
   'ui.bootstrap'])
 

@@ -2,7 +2,15 @@
   "staging": {
     "ENV": "staging",
     "API_URL": "http://staging.endpoint.com",
-    "MOCK_API_URL": "https://www.mockable.io"
+    "MOCK_API_URL": "https://www.mockable.io",
+    "MOCK_API_URL_SERVICE": {
+      "ModelOneService": false,
+      "ModelTwoService": false
+    },
+    "PRELOAD_SERVICE": {
+      "ModelOneService": false,
+      "ModelTwoService": false
+    }
   },
   "production": {
     "ENV": "production",

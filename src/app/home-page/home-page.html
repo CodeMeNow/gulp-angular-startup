@@ -1,21 +1,13 @@
 <h2>Home page content</h2>
-change top
 <button type="button" ui-sref="main.login">Go to Login</button>
 
 <div class="row">
-  <div class="col-xs-24">
-    <h4>Mocked Prefetched data</h4>
-    {{homePage.modelOneService.modelOneList}}
-  </div>
-</div>
-
-<div class="row">
   <div class="col-xs-12">
-    left col 12
+    <h4>Model one prefetched data</h4>
+    {{homePage.modelOneService.dataList}}
   </div>
   <div class="col-xs-12">
-    right col 12
+    <h4>Model two api mocked data</h4>
+    {{homePage.modelTwoService.dataList}}
   </div>
 </div>
-
-change bottom

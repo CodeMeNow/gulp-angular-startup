@@ -1,14 +1,13 @@
 export class HomePageController {
-  constructor(modelOneService, modelTwoService, $timeout){
+  constructor(modelOneService, modelTwoService){
     'ngInject';
 
     this.modelOneService = modelOneService;
+    this.modelTwoService = modelTwoService;
 
-    $timeout(() => {
-      modelTwoService.resource.query((response) => {
-        this.modelTwoList = response;
-        console.log(this.modelTwoList);
-      });
-    }, 100);
+    modelTwoService.resource.query((response) => {
+      this.modelTwoList = response;
+      console.log(this.modelTwoList);
+    });
   }
 }
