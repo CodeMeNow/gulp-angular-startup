@@ -2,8 +2,9 @@ import {appConstants} from '../common/constants/app-constants';
 //Controllers
 import {DefaultModalController} from './common/modals/default-modal.controller.js';
 //Services
-import {MockService} from './services/mock.service.js';
+import {LoginService} from './services/login-service.js';
 import {ModalManagerService} from './services/modal-manager.service.js';
+import {MockService} from './services/mock.service.js';
 import {ConstantManager} from './services/constant-manager.provider.js';
 
 export const appUtilsModule = (function appUtilsModule() {
@@ -13,8 +14,9 @@ export const appUtilsModule = (function appUtilsModule() {
     //Controllers
     .controller('DefaultModalController', DefaultModalController)
     //Services
-    .service('mockService', MockService)
+    .service('loginService', LoginService)
     .service('modalManagerService', ModalManagerService)
+    .service('mockService', MockService)
     .provider('constantManager', ConstantManager)
     ;
 }());

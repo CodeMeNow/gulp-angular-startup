@@ -8,11 +8,11 @@ export class ModelTwoService {
     this.resourceName = 'model-two';
     this.dataList = [];
 
-    this._initService();
+    this.initService();
   }
 
-  _initService() {
-    this._initMock();
+  initService() {
+    this.initMock();
     this.resource = this.$resource(
       `${this.apiUrl}/:id`, {id: '@id'},
       {
@@ -21,7 +21,7 @@ export class ModelTwoService {
       });
   }
 
-  _initMock() {
+  initMock() {
     const MOCK_API_URL_SERVICE = this.constantManager.get('MOCK_API_URL_SERVICE');
     if (MOCK_API_URL_SERVICE['ModelTwoService']) {
       this.apiUrl = `${this.constantManager.get('MOCK_API_URL')}/${this.resourceName}`;
@@ -31,7 +31,7 @@ export class ModelTwoService {
 
     const PRELOAD_SERVICE = this.constantManager.get('PRELOAD_SERVICE');
     if (PRELOAD_SERVICE['ModelTwoService']) {
-      this.mockService.get('model-two').then((mockedModel) => {
+      this.mockService.get(this.resourceName).then((mockedModel) => {
         this.dataList = mockedModel;
       });
     }

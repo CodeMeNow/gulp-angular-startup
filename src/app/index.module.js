@@ -35,7 +35,8 @@ angular.module('app', [
   //Vendor modues
   'ui.router',
   'ui.bootstrap',
-  'pascalprecht.translate'])
+  'pascalprecht.translate',
+  'LocalStorageModule'])
 
   .constant('moment', moment)
   .config(config)
