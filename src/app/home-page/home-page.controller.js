@@ -8,7 +8,7 @@ export class HomePageController {
     this.modelTwoService = modelTwoService;
 
     modelTwoService.resource.query((response) => {
-      this.modelTwoList = response;
+      this.modelTwoList = response.payload;
       console.log(this.modelTwoList);
     });
 

@@ -24,9 +24,9 @@ export class ModelOneService {
   initMock() {
     const MOCK_API_URL_SERVICE = this.constantManager.get('MOCK_API_URL_SERVICE');
     if (MOCK_API_URL_SERVICE['ModelOneService']) {
-      this.apiUrl = `${this.constantManager.get('MOCK_API_URL')}/${this.resourceName}`;
+      this.apiUrl = `${this.constantManager.get('MOCK_API_URL')}${this.resourceName}`;
     } else {
-      this.apiUrl = `${this.constantManager.get('API_URL')}/${this.resourceName}`;
+      this.apiUrl = `${this.constantManager.get('API_URL')}${this.resourceName}`;
     }
 
     const PRELOAD_SERVICE = this.constantManager.get('PRELOAD_SERVICE');
