@@ -5,7 +5,9 @@ export function config($logProvider, $locationProvider, $httpProvider, $compileP
   $compileProvider.debugInfoEnabled(constantManagerProvider.getConstant('ENV') !== 'production');
   $locationProvider.html5Mode(constantManagerProvider.getConstant('HTML5_MODE'));
   $httpProvider.useApplyAsync(constantManagerProvider.getConstant('USE_APPLYASYNC'));
-  // $httpProvider.interceptors.push('httpInterceptor');
+
+  //Interceptor
+  $httpProvider.interceptors.push('httpInterceptor');
 
   //Local storage configs
   localStorageServiceProvider.setPrefix(constantManagerProvider.getConstant('APP_NAME'));

@@ -5,6 +5,7 @@ import {DefaultModalController} from './common/modals/default-modal.controller.j
 import {LoginService} from './services/login-service.js';
 import {ModalManagerService} from './services/modal-manager.service.js';
 import {MockService} from './services/mock.service.js';
+import {HttpInterceptor} from './services/http-interceptor.factory.js';
 import {ConstantManager} from './services/constant-manager.provider.js';
 
 export const appUtilsModule = (function appUtilsModule() {
@@ -17,6 +18,7 @@ export const appUtilsModule = (function appUtilsModule() {
     .service('loginService', LoginService)
     .service('modalManagerService', ModalManagerService)
     .service('mockService', MockService)
+    .factory('httpInterceptor', HttpInterceptor)
     .provider('constantManager', ConstantManager)
     ;
 }());

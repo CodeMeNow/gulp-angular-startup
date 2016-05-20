@@ -7,7 +7,7 @@
   "attr-no-duplication": true,
   "tag-self-close": false,
   "tag-pair": true,
-  "attr-value-not-empty": true,
+  "attr-value-not-empty": false,
   "title-require": true,
   "id-class-value": "dash",
   "inline-style-disabled": true,

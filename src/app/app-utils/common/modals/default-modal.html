@@ -1,26 +1,13 @@
 <div class="modal-header">
   <h4 class="modal-title" ng-switch on="modal.config.type">
-    <span ng-switch-when="error">
-      <i class="fa fa-times-circle"></i> Errore
-    </span>
-    <span ng-switch-when="danger">
-      <i class="fa fa-exclamation-circle"></i> Attenzione</i>
-    </span>
-    <span ng-switch-when="success">
-      <i class="fa fa-check-circle"></i> Successo
-    </span>
-    <span ng-switch-when="info">
-      <i class="fa fa-info-circle"></i> Info
-    </span>
-    <span ng-switch-default>
-      <i class="fa fa-info-circle"></i> Info
-    </span>
+    <i ng-if="modal.config.type === 'danger' || modal.config.type === 'error'" class="fa fa-exclamation-circle"></i>
+    <i ng-if="modal.config.type === 'success'" class="fa fa-check-circle"></i>
+    <i ng-if="modal.config.type === 'info'" class="fa fa-info-circle"></i>
     {{modal.config.title}}
   </h4>
 </div>
 
 <div class="modal-body">
-  {{modal.config}}
   <div class="message" ng-if="modal.config.message">
     {{modal.config.message}}
   </div>
