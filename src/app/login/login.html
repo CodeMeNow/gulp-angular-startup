@@ -10,7 +10,7 @@
       Is logged: {{login.loginService.isLogged}}
       <span ng-if="login.loginService.isLogged">Token expire date: {{login.loginService.tokenClaim.exp | date:'dd-MM-yyyy'}}</span>
     </p>
-    <form ng-submit="login.login()">
+    <form ng-if="!login.loginService.isLogged" ng-submit="login.login()">
       <div class="form-group">
         <label for="exampleInputEmail1">Username</label>
         <input ng-model="login.loginData.username" type="text" class="form-control" placeholder="Username">
@@ -21,5 +21,9 @@
       </div>
       <button type="submit" class="btn btn-default">Login</button>
     </form>
+  </div>
+
+  <div ng-if="login.loginService.isLogged">
+    <button type="button" ng-click="login.loginService.logout()">Logout</button>
   </div>
 </div>

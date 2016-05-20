@@ -77,13 +77,14 @@ export class LoginService {
 
   logout() {
     this.tokenClaim = null;
+    this.isLogged = false;
     this.localStorageService.remove('token');
   }
 
   _parseClaimFromToken(token) {
     let encodedToken = token.split('.')[1];
     this.tokenClaim = angular.fromJson(this._urlBase64Decode(encodedToken));
-    // this.tokenClaim.exp = 1468953527513;
+    this.tokenClaim.exp = 1468953527513;
     this.$log.debug('tokenClaim', this.tokenClaim);
     return this.tokenClaim;
   }

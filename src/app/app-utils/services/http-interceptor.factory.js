@@ -36,16 +36,21 @@ export function HttpInterceptor($log, $injector) {
     let modalErrorPayload = {
       dismissable: false
     };
-    let errorData = response.data.metadata && (response.data.metadata.error || response.data.metadata.info);
-    if (angular.isObject(errorData)) {
-      angular.extend(modalErrorPayload, errorData);
+    let errorInfoData = response.data && response.data.metadata &&
+        (response.data.metadata.error || response.data.metadata.info);
+    if (errorInfoData) {
+      angular.extend(modalErrorPayload, errorInfoData);
       modalErrorPayload.closeBtnTitle = 'Close';
+      modalManagerService.open(modalErrorPayload);
+      return true;
+    } else if (response.data) {
+      modalErrorPayload.message = response.data;
     } else {
-      modalErrorPayload.title = 'Server error';
       modalErrorPayload.message = 'Damn! Server error';
-      modalErrorPayload.type = 'error';
-      modalErrorPayload.closeBtnTitle = 'Close';
     }
+    modalErrorPayload.title = 'Server error';
+    modalErrorPayload.type = 'error';
+    modalErrorPayload.closeBtnTitle = 'Close';
     modalManagerService.open(modalErrorPayload);
   }
 
