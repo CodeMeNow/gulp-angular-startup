@@ -3,6 +3,7 @@
 var path = require('path');
 var gulp = require('gulp');
 var conf = require('./conf');
+var gutil = require('gulp-util');
 
 var $ = require('gulp-load-plugins')({
   pattern: ['gulp-*', 'main-bower-files', 'uglify-save-license', 'del']
@@ -94,4 +95,11 @@ gulp.task('clean', function () {
   return $.del([path.join(conf.paths.dist, '/'), path.join(conf.paths.tmp, '/')]);
 });
 
-gulp.task('build', ['html', 'fonts', 'other']);
+gulp.task('build', ['html', 'fonts', 'other'], function () {
+  console.log(conf.paths.dist);
+  var baseUrl = gutil.env.baseUrl ? gutil.env.baseUrl : '/';
+  console.log(baseUrl);
+  return gulp.src(path.join(conf.paths.dist, '/index.html'))
+    .pipe($.replace('<base href="/">', '<base href="' + baseUrl + '">'))
+    .pipe(gulp.dest(path.join(conf.paths.dist)));
+});
