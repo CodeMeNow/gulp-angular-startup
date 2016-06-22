@@ -36,7 +36,8 @@ angular.module('app', [
   'ui.router',
   'ui.bootstrap',
   'pascalprecht.translate',
-  'LocalStorageModule'])
+  'LocalStorageModule',
+  'toastr'])
 
   .constant('moment', moment)
   .config(config)

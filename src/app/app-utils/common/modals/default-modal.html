@@ -25,12 +25,17 @@
   <button
       class="btn btn-default"
       type="button"
-      ng-if="modal.config.dismissableBtnTitle"
+      ng-if="modal.config.cancelBtnText"
       ng-click="modal.dismiss()">
-    {{modal.config.dismissableBtnTitle}}
+    {{modal.config.cancelBtnText}}
   </button>
 
-  <button class="btn btn-primary" type="button" ng-click="modal.close()">
-    {{modal.config.closeBtnTitle}}
+
+  <button
+      class="btn btn-primary"
+      type="button"
+      ng-if="modal.config.okBtnText"
+      ng-click="modal.close()">
+    {{modal.config.okBtnText}}
   </button>
 </div>

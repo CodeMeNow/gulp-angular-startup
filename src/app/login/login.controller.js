@@ -51,6 +51,17 @@ export class LoginController {
     });
   }
 
+  testGenericError() {
+    return this.$http({
+      method: 'GET',
+      url: `http://asd.asd.org/not-exixt`
+    }).then((response) => {
+      this.$log.log(response);
+    }, (reason) => {
+      this.$log.log(reason);
+    });
+  }
+
   _initController() {
     this.loginService.autoLogin().then((response) => {
       this.$log.debug(response, ' ask for user details...');

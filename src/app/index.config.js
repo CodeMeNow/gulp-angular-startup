@@ -1,5 +1,5 @@
 export function config($logProvider, $locationProvider, $httpProvider, $compileProvider, constantManagerProvider,
-    $translatePartialLoaderProvider, $translateProvider, localStorageServiceProvider) {
+    $translatePartialLoaderProvider, $translateProvider, localStorageServiceProvider, toastrConfig) {
   'ngInject';
   $logProvider.debugEnabled(constantManagerProvider.getConstant('ENV') !== 'production');
   $compileProvider.debugInfoEnabled(constantManagerProvider.getConstant('ENV') !== 'production');
@@ -19,4 +19,18 @@ export function config($logProvider, $locationProvider, $httpProvider, $compileP
   });
   $translateProvider.preferredLanguage('it');
   $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
+
+  //Toastr
+  angular.extend(toastrConfig, {
+    autoDismiss: false,
+    containerId: 'toast-container',
+    maxOpened: 3,
+    newestOnTop: true,
+    positionClass: 'toast-top-right',
+    preventDuplicates: true,
+    preventOpenDuplicates: true,
+    target: 'body',
+    timeOut: 3000,
+    extendedTimeOut: 3000
+  });
 }

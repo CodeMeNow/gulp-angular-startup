@@ -7,10 +7,7 @@ export class HomePageController {
     this.modelOneService = modelOneService;
     this.modelTwoService = modelTwoService;
 
-    modelTwoService.resource.query((response) => {
-      this.modelTwoList = response.payload;
-      console.log(this.modelTwoList);
-    });
+    modelTwoService.get();
 
     $translatePartialLoader.addPart('home-page');
   }
