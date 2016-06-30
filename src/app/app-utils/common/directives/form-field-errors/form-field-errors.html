@@ -1,0 +1,34 @@
+<div ng-messages="formFieldErrors.formField.$error">
+  <div ng-if="formFieldErrors.formField.$touched || formFieldErrors.form.$submitted">
+    <ng-transclude></ng-transclude>
+    <div class="validation-error-wrapper">
+      <div ng-message="required">
+        Questo campo &egrave; obbligatorio
+      </div>
+      <div ng-message="min">
+        Cifra troppo bassa
+      </div>
+      <div ng-message="max">
+        Cifra troppo alta
+      </div>
+      <div ng-message="minValue">
+        Cifra troppo bassa
+      </div>
+      <div ng-message="maxValue">
+        Cifra troppo alta
+      </div>
+      <div ng-message="pattern">
+        Il valore inserito non &egrave; corretto
+      </div>
+      <div ng-message="email">
+        Email non valida
+      </div>
+      <div ng-message="inputMatch">
+        Le password inserite sono diverse
+      </div>
+      <div ng-message-exp="['minlength', 'maxlength']">
+        Lunghezza non valida
+      </div>
+    </div>
+  </div>
+</div>

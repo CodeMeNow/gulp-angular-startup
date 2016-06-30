@@ -8,6 +8,9 @@ import {MockService} from './services/mock.service.js';
 import {HttpInterceptor} from './services/http-interceptor.factory.js';
 import {ConstantManager} from './services/constant-manager.provider.js';
 
+//Directives
+import {FormFieldErrorsDirective} from './common/directives/form-field-errors/form-field-errors.directive.js';
+
 export const appUtilsModule = (function appUtilsModule() {
   angular.module('app.utils', [
     'ui.bootstrap'])
@@ -20,5 +23,8 @@ export const appUtilsModule = (function appUtilsModule() {
     .service('mockService', MockService)
     .factory('httpInterceptor', HttpInterceptor)
     .provider('constantManager', ConstantManager)
+
+    //Directives
+    .directive('formFieldErrors', FormFieldErrorsDirective)
     ;
 }());
