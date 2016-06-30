@@ -57,6 +57,7 @@ gulp.task('ngConstants', function (){
   var env = gutil.env.env ? gutil.env.env : 'development';
   var constants = require('../src/app/common/constants/ng-constants.json');
   var localConstants = {};
+
   if (env === 'development') {
     try {
       delete require.cache[require.resolve('../src/app/common/constants/local-constants.json')];

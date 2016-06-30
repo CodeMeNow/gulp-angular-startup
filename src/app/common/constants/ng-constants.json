@@ -1,4 +1,27 @@
 {
+  "development": {
+    "ENV": "development",
+    "API_URL": "https://development.endpoint.com",
+    "MOCK_API_URL": "https://w5bpr2hc8mjekzbdf.stoplight-proxy.io/api/v1/",
+    "MOCK_API_URL_SERVICE": {
+      "ModelOneService": false,
+      "ModelTwoService": true,
+      "LoginService": true,
+      "LoggerService": true
+    },
+    "PRELOAD_SERVICE": {
+      "ModelOneService": true,
+      "ModelTwoService": false
+    },
+    "ENABLED_LOG_METHODS": {
+      "info": true,
+      "log": true,
+      "debug": true,
+      "warn": true,
+      "error": true
+    },
+    "ENABLE_LOG_STORE_SERVICE": false
+  },
   "staging": {
     "ENV": "staging",
     "API_URL": "http://staging.endpoint.com",
@@ -10,10 +33,27 @@
     "PRELOAD_SERVICE": {
       "ModelOneService": false,
       "ModelTwoService": false
-    }
+    },
+    "ENABLED_LOG_METHODS": {
+      "info": true,
+      "log": true,
+      "debug": true,
+      "warn": true,
+      "error": true
+    },
+    "ENABLE_LOG_STORE_SERVICE": false
+
   },
   "production": {
     "ENV": "production",
     "API_URL": "http://production.endpoint.com"
-  }
+  },
+  "ENABLED_LOG_METHODS": {
+    "info": true,
+    "log": true,
+    "debug": true,
+    "warn": true,
+    "error": true
+  },
+  "ENABLE_LOG_STORE_SERVICE": false
 }
