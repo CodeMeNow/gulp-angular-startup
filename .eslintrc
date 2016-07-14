@@ -36,6 +36,7 @@
     "space-before-keywords": 2,
     "space-before-function-paren": [2, "never"],
     "space-in-parens": 2,
+    "space-infix-ops": 2,
     "quotes": [2, "single"]
   },
   "env": {
