@@ -1,6 +1,6 @@
 {
   "name": "app",
-  "version": "0.2.4-lol.2",
+  "version": "0.2.4",
   "dependencies": {},
   "scripts": {
     "test": "gulp test"
