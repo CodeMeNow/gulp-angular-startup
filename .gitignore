@@ -10,3 +10,5 @@ src/app/common/constants/ngConstants.js
 src/app/common/constants/local-constants.json
 cypress/screenshots
 js-doc/
+kss-styleguide/
+sc5-styleguide/
