@@ -1,6 +1,6 @@
 {
   "name": "app",
-  "version": "0.2.2-lol.0",
+  "version": "0.2.2-lol.1",
   "dependencies": {
     "angular": "~1.5.0",
     "angular-animate": "~1.5.0",
