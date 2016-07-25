@@ -1,4 +1,4 @@
-export function routerConfig() {
+export function routerConfig($urlRouterProvider) {
   'ngInject';
 
   // $stateProvider
@@ -14,5 +14,5 @@ export function routerConfig() {
   //   }
   // });
   //
-  // $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/demo/login');
 }
