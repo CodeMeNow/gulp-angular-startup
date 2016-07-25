@@ -1,4 +1,4 @@
-describe('HomePageController', () => {
+describe('DHomePageController', () => {
   let homePageController;
 
   beforeEach(angular.mock.module('app'));

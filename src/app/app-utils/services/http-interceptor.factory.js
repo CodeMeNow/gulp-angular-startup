@@ -8,7 +8,22 @@ export function HttpInterceptor($log, $injector) {
   };
 
   function handleRequest(request){
-    // if (~request.url.indexOf('api')) {}
+    //NOTE if JWT is used uncomment this lines
+    // if (~request.url.indexOf(constantManager.get('API_URL'))) {
+    //   //TODO check for expired token
+    //   const token = localStorageService.get('token');
+    //   if (token) {
+    //     request.headers.Authorization = `Bearer ${token}`;
+    //   }
+    //   let filteredParams = {};
+    //   for (let param in request.params) {
+    //     if (angular.isDefined(request.params[param]) && request.params[param] !== '' &&
+    //          request.params[param] !== ' ') {
+    //       filteredParams[param] = request.params[param];
+    //     }
+    //   }
+    //   request.params = filteredParams;
+    // }
     return request;
   }
 

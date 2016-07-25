@@ -1,5 +1,5 @@
 /** Class for header section. */
-export class HeaderController {
+export class DHeaderController {
   /**
      * Create a controller.
      */

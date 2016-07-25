@@ -1,0 +1,77 @@
+.modal-body {
+  ul {
+    margin-top: 20px;
+  }
+}
+
+.validation-error-wrapper {
+  div {
+    background: #C88;
+    padding: 5px;
+    margin: 5px 0;
+  }
+}
+
+.breakpoint-tester {
+  @extend .debug;
+  display: none;
+}
+
+.show-me-when-lt-xs {
+  @include breakpoint('lt-xs') {
+    display: block;
+  }
+}
+.show-me-when-xs {
+  @include breakpoint('xs') {
+    display: block;
+  }
+}
+.show-me-when-gte-xs {
+  @include breakpoint('gte-xs') {
+    display: block;
+  }
+}
+.show-me-when-gt-xs {
+  @include breakpoint('gt-xs') {
+    display: block;
+  }
+}
+
+.show-me-when-sm {
+  @include breakpoint('sm') {
+    display: block;
+  }
+}
+.show-me-when-gte-sm {
+  @include breakpoint('gte-sm') {
+    display: block;
+  }
+}
+.show-me-when-gt-sm {
+  @include breakpoint('gt-sm') {
+    display: block;
+  }
+}
+
+.show-me-when-md {
+  @include breakpoint('md') {
+    display: block;
+  }
+}
+.show-me-when-gt-md {
+  @include breakpoint('gt-md') {
+    display: block;
+  }
+}
+.show-me-when-gte-md {
+  @include breakpoint('gte-md') {
+    display: block;
+  }
+}
+
+.show-me-when-lg {
+  @include breakpoint('lg') {
+    display: block;
+  }
+}

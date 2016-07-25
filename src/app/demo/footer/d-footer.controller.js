@@ -1,4 +1,4 @@
-export class FooterController {
+export class DFooterController {
   constructor(){
     'ngInject';
   }

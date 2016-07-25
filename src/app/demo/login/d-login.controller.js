@@ -1,4 +1,4 @@
-export class LoginController {
+export class DLoginController {
   constructor($log, loginService, $http, constantManager) {
     'ngInject';
     this.$log = $log;

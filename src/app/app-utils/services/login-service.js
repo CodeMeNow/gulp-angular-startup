@@ -84,7 +84,8 @@ export class LoginService {
   _parseClaimFromToken(token) {
     let encodedToken = token.split('.')[1];
     this.tokenClaim = angular.fromJson(this._urlBase64Decode(encodedToken));
-    this.tokenClaim.exp = 1468953527513;
+    //TODO remove this exipire trick
+    this.tokenClaim.exp = new Date().getTime() + 10000000000;
     this.$log.debug('tokenClaim', this.tokenClaim);
     return this.tokenClaim;
   }

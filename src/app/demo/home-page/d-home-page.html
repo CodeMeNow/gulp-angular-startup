@@ -1,5 +1,5 @@
 <h2>Home page content</h2>
-<button type="button" ui-sref="main.login">Go to Login</button>
+<button type="button" ui-sref="demo.login">Go to Login</button>
 
 <div class="row">
   <div class="col-xs-24">
@@ -8,17 +8,17 @@
     </p>
     <button type="button"
         class="switch-to-ita"
-        ng-click="homePage.changeLanguage('it')">
+        ng-click="dHomePage.changeLanguage('it')">
       Italiano
     </button>
     <button type="button"
         class="switch-to-en"
-        ng-click="homePage.changeLanguage('en')">
+        ng-click="dHomePage.changeLanguage('en')">
       English
     </button>
     <button type="button"
         class="switch-to-pl"
-        ng-click="homePage.changeLanguage('pl')">
+        ng-click="dHomePage.changeLanguage('pl')">
       Polski
     </button>
   </div>
@@ -26,18 +26,18 @@
 <div class="row">
   <div class="col-xs-12">
     <h4>Model one prefetched data</h4>
-    {{homePage.modelOneService.dataList}}
+    {{dHomePage.modelOneService.dataList}}
   </div>
   <div class="col-xs-12">
     <h4>Model two api mocked data</h4>
-    {{homePage.modelTwoService.dataList}}
+    {{dHomePage.modelTwoService.dataList}}
   </div>
 </div>
 
 <div class="row">
   <div class="col-xs-12">
     <h4>Test modal</h4>
-    <button type="button" ng-click="homePage.openModal()">Open Modal</button>
+    <button type="button" ng-click="dHomePage.openModal()">Open Modal</button>
   </div>
   <div class="col-xs-12">
   </div>
@@ -50,26 +50,52 @@
     <div class="hidden-xs debug">
       hiddenxs
     </div>
+
+    <div class="show-me-when-lt-xs breakpoint-tester">
+      lt xs
+    </div>
     <div class="show-me-when-xs breakpoint-tester">
       xs
+    </div>
+    <div class="show-me-when-gte-xs breakpoint-tester">
+      gte xs
     </div>
     <div class="show-me-when-gt-xs breakpoint-tester">
       gt xs
     </div>
+
     <div class="show-me-when-sm breakpoint-tester">
       sm
+    </div>
+    <div class="show-me-when-gte-sm breakpoint-tester">
+      gte sm
     </div>
     <div class="show-me-when-gt-sm breakpoint-tester">
       gt sm
     </div>
+
+
     <div class="show-me-when-md breakpoint-tester">
       md
     </div>
     <div class="show-me-when-gt-md breakpoint-tester">
       gt md
     </div>
+    <div class="show-me-when-gte-md breakpoint-tester">
+      gte md
+    </div>
+
     <div class="show-me-when-lg breakpoint-tester">
       lg
     </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    a
+  </div>
+  <div class="col-sm-12">
+    b
   </div>
 </div>

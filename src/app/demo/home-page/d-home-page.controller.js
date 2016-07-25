@@ -1,4 +1,4 @@
-export class HomePageController {
+export class DHomePageController {
   constructor($log, modelOneService, modelTwoService, $translate, $translatePartialLoader, modalManagerService) {
     'ngInject';
     this.$log = $log;

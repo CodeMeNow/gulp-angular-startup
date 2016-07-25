@@ -6,10 +6,6 @@ import {runBlock} from './index.run';
 
 //Controllers
 import {MainController} from './main/main.controller';
-import {HomePageController} from './home-page/home-page.controller';
-import {HeaderController} from './header/header.controller';
-import {FooterController} from './footer/footer.controller';
-import {LoginController} from './login/login.controller';
 
 //Services
   //Models
@@ -19,11 +15,13 @@ import {ModelTwoService} from './common/models/model-two.service';
 //Internal modules imports
 /*eslint-disable */
 import {appUtilsModule} from './app-utils/app-utils.module';
+import {appDemoModule} from './demo/demo.module';
 /*eslint-enable */
 
 angular.module('app', [
   'env.constants',
   'app.utils',
+  'app.demo',
   //Angular modules
   'ngAnimate',
   'ngCookies',
@@ -46,10 +44,7 @@ angular.module('app', [
 
   //Controllers
   .controller('MainController', MainController)
-  .controller('HomePageController', HomePageController)
-  .controller('HeaderController', HeaderController)
-  .controller('FooterController', FooterController)
-  .controller('LoginController', LoginController)
+
 
   //Services
     //Models
