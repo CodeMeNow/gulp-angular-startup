@@ -4,7 +4,7 @@ describe('DHomePageController', () => {
   beforeEach(angular.mock.module('app'));
 
   beforeEach(inject(($controller) => {
-    homePageController = $controller('HomePageController');
+    homePageController = $controller('DHomePageController');
   }));
 
   it('should exist', () => {
