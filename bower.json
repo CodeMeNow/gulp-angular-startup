@@ -28,6 +28,16 @@
   "overrides": {
     "bootstrap-sass": {
       "main": []
+    },
+    "components-font-awesome": {
+      "main": [
+        "scss/font-awesome.scss",
+        "fonts/fontawesome-webfont.eot",
+        "fonts/fontawesome-webfont.woff",
+        "fonts/fontawesome-webfont.woff2",
+        "fonts/fontawesome-webfont.ttf",
+        "fonts/fontawesome-webfont.svg"
+      ]
     }
   }
 }
