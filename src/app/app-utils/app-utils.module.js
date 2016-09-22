@@ -18,6 +18,9 @@ import {MatchmediaService} from './services/matchmedia.service.js';
 //Directives
 import {FormFieldErrorsDirective} from './common/directives/form-field-errors/form-field-errors.directive.js';
 
+//Components
+import {EcPaginatorComponent} from './common/components/paginator.component.js';
+
 export const appUtilsModule = (function appUtilsModule() {
   angular.module('app.utils', [
     'ui.bootstrap',
@@ -40,5 +43,8 @@ export const appUtilsModule = (function appUtilsModule() {
 
     //Directives
     .directive('formFieldErrors', FormFieldErrorsDirective)
+
+    //Components
+    .component('paginator', EcPaginatorComponent)
     ;
 }());
